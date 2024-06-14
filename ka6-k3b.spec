@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.0
+%define		kdeappsver	24.05.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		k3b
 Summary:	K3b - CD Kreator
 Name:		ka6-%{kaname}
-Version:	24.05.0
+Version:	24.05.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	935239018ea5451de7fc2b05fc6250d0
+# Source0-md5:	16b7175573a669c5bd4acfb899c8420a
 Patch0:		musepack.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -59,6 +59,7 @@ BuildRequires:	taglib-devel
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	%{name}-data = %{version}-%{release}
+Obsoletes:	ka5-%{kaname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -97,6 +98,7 @@ Kreator CD oferuje:
 Summary:	Data files for %{kaname}
 Summary(pl.UTF-8):	Dane dla %{kaname}
 Group:		X11/Applications
+Obsoletes:	ka5-%{kaname}-data < %{version}
 BuildArch:	noarch
 
 %description data
@@ -110,6 +112,7 @@ Summary:	Header files for %{kaname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kaname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Obsoletes:	ka5-%{kaname}-devel < %{version}
 
 %description devel
 Header files for %{kaname} development.
