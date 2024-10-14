@@ -173,6 +173,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3boggvorbisencoder.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3bsoxencoder.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3bwavedecoder.so
+%dir %{_libdir}/qt6/plugins/k3b_plugins/kcms
 %attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3bexternalencoder.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3blameencoder.so
 %attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3boggvorbisencoder.so
