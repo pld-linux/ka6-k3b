@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.12.1
+%define		kdeappsver	24.12.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		k3b
 Summary:	K3b - CD Kreator
 Name:		ka6-%{kaname}
-Version:	24.12.1
+Version:	24.12.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	b77aecff2dc35a30938efb32ffb1612f
+# Source0-md5:	87d18a897ba0d8442bf48e20d005c3ad
 Patch0:		musepack.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -122,7 +122,7 @@ Pliki nagłówkowe dla programistów używających %{kaname}.
 
 %prep
 %setup -q -n %{kaname}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %cmake \
