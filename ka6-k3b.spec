@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		k3b
 Summary:	K3b - CD Kreator
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	72fd43d634929fbf1726d1f973d3034c
+# Source0-md5:	7d31d34f06b35598bde75f5e8baec515
 Patch0:		musepack.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -164,29 +164,29 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/k3b
 %ghost %{_libdir}/libk3bdevice.so.8
-%attr(755,root,root) %{_libdir}/libk3bdevice.so.*.*
+%{_libdir}/libk3bdevice.so.*.*
 %ghost %{_libdir}/libk3blib.so.8
-%attr(755,root,root) %{_libdir}/libk3blib.so.*.*
+%{_libdir}/libk3blib.so.*.*
 %dir %{_libdir}/qt6/plugins/k3b_plugins
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3baudiometainforenamerplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3baudioprojectcddbplugin.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3bexternalencoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3bffmpegdecoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3bflacdecoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3blameencoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3blibsndfiledecoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3bmaddecoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3bmpcdecoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3boggvorbisdecoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3boggvorbisencoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3bsoxencoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/k3bwavedecoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3baudiometainforenamerplugin.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3baudioprojectcddbplugin.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3bexternalencoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3bffmpegdecoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3bflacdecoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3blameencoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3blibsndfiledecoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3bmaddecoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3bmpcdecoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3boggvorbisdecoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3boggvorbisencoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3bsoxencoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/k3bwavedecoder.so
 %dir %{_libdir}/qt6/plugins/k3b_plugins/kcms
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3bexternalencoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3blameencoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3boggvorbisencoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3bsoxencoder.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kio/videodvd.so
+%{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3bexternalencoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3blameencoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3boggvorbisencoder.so
+%{_libdir}/qt6/plugins/k3b_plugins/kcms/kcm_k3bsoxencoder.so
+%{_libdir}/qt6/plugins/kf6/kio/videodvd.so
 %attr(755,root,root) %{_prefix}/libexec/kf6/kauth/k3bhelper
 
 %files data -f %{kaname}.lang
